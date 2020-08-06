@@ -41,8 +41,8 @@ for (let d = 0; d < allDivTags.length; d++) {
             )
             .replace(/&amp;/g, '&'),
             creator: currentDivTag.getAttribute('creator'),
-            created: currentDivTag.getAttribute('created'),
-            modified: currentDivTag.getAttribute('modified')
+            created: currentDivTag.getAttribute('created').substring(0, 8),
+            modified: currentDivTag.getAttribute('modified') ? currentDivTag.getAttribute('modified').substring(0, 8) : null
         }
     
         if (predefinedCategories.includes(recipe.title)) {
@@ -53,7 +53,7 @@ for (let d = 0; d < allDivTags.length; d++) {
                 let title = line.substring(
                     line.lastIndexOf("[[") + 2, 
                     line.lastIndexOf("]]")
-                );
+                )
     
                 recipesInCategory.push(title)
             })
