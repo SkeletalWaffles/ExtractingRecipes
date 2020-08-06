@@ -42,7 +42,11 @@ for (let d = 0; d < allDivTags.length; d++) {
             .replace(/&amp;/g, '&'),
             creator: currentDivTag.getAttribute('creator'),
             created: currentDivTag.getAttribute('created').substring(0, 8),
-            modified: currentDivTag.getAttribute('modified') ? currentDivTag.getAttribute('modified').substring(0, 8) : null
+            modified: currentDivTag.getAttribute('modified') &&
+                currentDivTag.getAttribute('created').substring(0, 8) !== currentDivTag.getAttribute('modified').substring(0, 8) ? 
+            (
+                currentDivTag.getAttribute('modified').substring(0, 8)
+            ) : null
         }
     
         if (predefinedCategories.includes(recipe.title)) {
