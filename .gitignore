@@ -1,2 +1,5 @@
 # Don't copy over the base data
 data/
+
+# Ignore these (obviously)
+/node_modules
