@@ -3,3 +3,5 @@ data/
 
 # Ignore these (obviously)
 /node_modules
+
+package-lock.json
