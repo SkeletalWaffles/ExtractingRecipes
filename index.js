@@ -82,5 +82,5 @@ for (let c in categoriesByName) {
     })
 }
 
-fs.writeFileSync('../forsyth-recipes-with-links/data/recipes.json', JSON.stringify(recipesByTitle))
-fs.writeFileSync('../forsyth-recipes-with-links/data/categories.json', JSON.stringify(categoriesByName))
+fs.writeFileSync('../ForsythRecipes/data/recipes.json', JSON.stringify(recipesByTitle))
+fs.writeFileSync('../ForsythRecipes/data/categories.json', JSON.stringify(categoriesByName))
